@@ -1,0 +1,171 @@
+@use "../base";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+
+  @include base.breakpoint-up("medium") {
+    height: 96px;
+  }
+
+  // @include base.breakpoint-up("large") {
+  //   margin-top: 40px !important;
+  // }
+
+  .space-icon {
+    @include base.breakpoint-down("small") {
+      height: 40px;
+      width: 40px;
+    }
+    @include base.breakpoint-up("medium") {
+      @include base.breakpoint-down("medium") {
+        margin-left: 40px;
+      }
+    }
+    @include base.breakpoint-up("large") {
+      margin-left: 55px;
+    }
+  }
+  .nav__menu {
+    display: none;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 4%);
+    backdrop-filter: blur(36px);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 254px;
+    z-index: 2;
+    padding: 24px;
+
+    .second {
+      position: fixed;
+      right: 24px;
+      top: 41px;
+    }
+
+    &__padding {
+      padding: 0 24px;
+    }
+
+    &.show {
+      display: block;
+      @include base.breakpoint-down("small") {
+        overflow: hidden;
+        padding: 132px 48px;
+      }
+      h5 {
+        color: base.$white;
+        margin-bottom: 32px;
+      }
+      @include base.breakpoint-up("medium") {
+        margin: 0;
+      }
+
+    }
+
+    @include base.breakpoint-up("medium") {
+      display: flex !important;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0;
+      padding: 0 50px;
+      height: 100%;
+      width: 70%;
+      bottom: auto;
+      position: relative;
+      margin-left: auto !important;
+      h5 {
+        padding: auto 6px;
+        letter-spacing: 2.7px;
+        font-size: 16px;
+      }
+      a {
+        position: relative;
+      }
+
+      a.__active::after, a:hover::after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 3px;
+        background-color: base.$white;
+        bottom: 8px;
+
+        @include base.breakpoint-down("medium") {
+          bottom: 7px;
+        }
+      }
+
+      a:not(.__active):hover::after {
+        opacity: .5;
+      }
+    }
+
+    @include base.breakpoint-up("medium") {
+      @include base.breakpoint-down("medium") {
+        max-width: 570px;
+        h5 {
+          @include base.subheading2;
+        }
+
+        span {
+          display: none;
+        }
+      }
+    }
+
+    @include base.breakpoint-up("large") {
+      width: 60%;
+      padding-left: 10%;
+      padding-right: 10%;
+
+      @include base.breakpoint-down("large") {
+        h5 {
+          span {
+            display: none;
+          }
+        }
+      }
+    }
+
+  }
+
+  .hamburger {
+    position: relative;
+    // position: fixed;
+    z-index: 10;
+
+    @include base.breakpoint-up("medium") {
+      display: none;
+      // position: relative;
+    }
+  }
+  a {
+    text-decoration: none;
+  }
+
+  hr {
+    display: none;
+    width: 42%;
+    // left: 20px;
+    position: absolute;
+    z-index: 3;
+
+    @include base.breakpoint-up("large") {
+      display: block;
+    }
+  }
+
+  .d-flex {
+    display: flex;
+  }
+
+  .container__1 {
+    @include base.breakpoint-up("medium") {
+      align-items: center;
+    }
+  }
+}

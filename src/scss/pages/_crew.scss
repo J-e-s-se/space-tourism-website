@@ -1,0 +1,129 @@
+@use "../base";
+
+.crew {
+
+  .title__intro {
+    margin-bottom: 2.2rem;
+  }
+  .slider__nav {
+    width: 90px;
+    .slider {
+      width: 10px;
+      height: 10px;
+
+      &:not(.active):hover {
+        opacity: .5;
+      }
+    }
+  
+    @include base.breakpoint-up("large") {
+      width: 132px;
+      .slider {
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+
+  .crew__img-con {
+    width: 52%;
+  }
+
+  .crew__img-con {
+    display: flex;
+    justify-content: right;
+  }
+
+  .crew__img {
+    width: 95%;
+  }
+
+  .crew__hr {
+    margin: 0;
+  }
+
+  @include base.breakpoint-down("small") {
+    .container__1 {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 450px;
+    }
+  }
+
+
+  @include base.breakpoint-down("medium") {
+    .crew__img-con{
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  @include base.breakpoint-up("medium") {
+    padding-bottom: 0;
+    .crew__hr {
+      display: none;
+    }
+    .container__1:not(.intro) {
+      display: flex;
+    }
+
+    .container__3 {
+      display: flex;
+      flex-direction: column;
+      margin-top: 1.25rem;
+
+      .slider__nav {
+        order: 1;
+        margin-top: 1.5rem;
+        margin-bottom: 2.5rem;
+      }
+    }
+    @include base.breakpoint-down("medium") {
+      .container__1:not(.intro) {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+
+      .crew__img-con {
+        width: 75%;
+      }
+    }
+  }
+
+  @include base.breakpoint-up("large") {
+    .container__1:not(.intro) {
+      flex-direction: row-reverse;
+      align-items: flex-start;
+    }
+
+    .crew__img-con {
+      width: 100%;
+    }
+
+    .container__3 {
+      width: 45%;
+      // margin-bottom: 3rem; testing
+      .slider__nav {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+      }
+
+      p {
+        margin-bottom: 2rem;
+        @include base.breakpoint-up("xxlarge") {
+          margin-bottom: 6rem;
+        }
+      }
+    }
+
+    .container__2 {
+      width: 50%;
+      padding-right: 10%;
+
+      @include base.breakpoint-up("large") {
+        // padding-top: 4rem;
+        align-self: flex-end;
+      }
+    }
+  }
+}

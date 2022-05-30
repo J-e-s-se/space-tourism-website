@@ -1,0 +1,211 @@
+@use "variables";
+@use "mixins";
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap');
+h1 {
+    color: variables.$white;
+    text-transform: uppercase;
+    font-family: 'Bellefair', serif;
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 100px;
+    margin: 16px 0;
+
+    @include mixins.breakpoint_up("medium") {
+        font-size: 150px;
+        margin: 45px 0;
+        line-height: 1;
+    }
+}
+
+h2 {
+    color: variables.$white;
+    text-transform: uppercase;
+    font-family: 'Bellefair', serif;
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 1;
+    margin-top: 0.4em;
+    margin-bottom: 0em;
+
+    @include mixins.breakpoint_up("medium") {
+        font-size: 80px;
+        margin-bottom: .4em;
+    }
+
+    @include mixins.breakpoint_up("large") {
+        font-size: 100px;
+    }
+}
+
+h3, h4 {
+    color: variables.$white;
+    text-transform: uppercase;
+    font-family: 'Bellefair', serif;
+    font-weight: 400;
+    line-height: 1;
+    margin-top: 0.4em;
+    margin-bottom: 0.4em;
+}
+
+h3 {
+    font-size: 24px;
+
+    @include mixins.breakpoint-up("medium") {
+        font-size: 40px;
+    }
+    @include mixins.breakpoint-up("large") {
+        font-size: 54px;
+    }
+}
+
+h4 {
+    font-size: 16px;
+    opacity: .5;
+
+    @include mixins.breakpoint-up("medium") {
+        font-size: 24px;
+    }
+    @include mixins.breakpoint-up("large") {
+        font-size: 32px;
+    }
+}
+
+h5, .h5 {
+    text-transform: uppercase;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 400;
+    letter-spacing: 2.7px;
+    font-size: 16px;
+
+    span {
+        font-weight: bold;
+    }
+
+    @include mixins.breakpoint_up("medium") {
+        font-size: 20px;
+        letter-spacing: 3.4px;
+        margin: 45px 0;
+    }
+
+    @include mixins.breakpoint_up("large") {
+        font-size: 28px;
+        letter-spacing: 4.7px;
+    }
+
+
+}
+
+p {
+    font-family: 'Barlow', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 25px;
+
+    @include mixins.breakpoint-up("medium") {
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+    @include mixins.breakpoint-up("large") {
+        font-size: 18px;
+        line-height: 32px;
+    }
+}
+
+h5, p, .tech-intro-text {
+    color: variables.$lavender-blue;
+}
+
+
+// subheading1
+.sbh1 { 
+    font-family: 'Bellefair', serif;
+    font-weight: 400;
+    font-size: 28px;
+    color: variables.$white;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+
+h6,  // nav-text
+.sbh2       // subheading2
+{      
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 400;
+    letter-spacing: 2.36px;
+    line-height: 1;
+    margin: 0.4em;
+    font-size: 14px;
+    color: variables.$lavender-blue;
+}
+
+@mixin subheading2 {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 400;
+    letter-spacing: 2.36px;
+    font-size: 14px;
+    color: variables.$lavender-blue;
+}
+
+.f1 {
+    font-size: 24px;
+}
+
+.nav-text {
+    cursor: pointer;
+}
+
+.explore-text {
+    font-family: 'Bellefair', serif;
+    font-size: 20px;
+    letter-spacing: 1.25px;
+    font-weight: 400;
+    color: variables.$rich-black;
+    text-transform: uppercase;
+
+    @include mixins.breakpoint-up("medium") {
+        font-size: 32px;    
+        letter-spacing: 2px;
+    }
+}
+
+.slider {
+    font-family: 'Bellefair', serif;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    line-height: 1;
+    font-weight: 400;
+    color: variables.$rich-black;
+    text-transform: uppercase;
+
+    @include mixins.breakpoint-up("medium") {
+        font-size: 1.5rem;
+        letter-spacing: 1.5px;
+    }
+
+    @include mixins.breakpoint-up("large") {
+        font-size: 2rem;
+        letter-spacing: 2px;
+    }    
+}
+
+.tech-intro-text {
+    text-transform: uppercase;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 400;
+    letter-spacing: 2.36px;
+    font-size: 14px;
+    color: variables.$lavender-blue;
+
+    @include mixins.breakpoint-up("medium") {
+        letter-spacing: 2.36px;
+        font-size: 14px;
+    }
+}

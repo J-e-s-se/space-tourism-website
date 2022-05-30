@@ -1,0 +1,95 @@
+@use "../base";
+
+
+.home_bg {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+.home {
+  .container__1 {
+    @include base.breakpoint-up("medium") {
+      margin-top: 105px;
+    }
+    @include base.breakpoint-up("xxlarge") {
+      margin-top: 200px;
+    }
+    .explore {
+      display: flex;
+      height: 150px;
+      width: 150px;
+      background-color: base.$white;
+      border-radius: 50% 50%;
+      transition: .3s;
+
+      @include base.breakpoint-down("small") {
+        margin-top: 80px;
+        // margin-bottom: 48px;
+      }
+
+      @include base.breakpoint-up("medium") {
+        @include base.breakpoint-down("medium") {
+          margin-top: 156px;
+          // margin-bottom: 90px;
+        }
+      }
+      
+      .explore-text {
+        margin: auto auto;
+      }
+  
+      @include base.breakpoint-up("medium") {
+        height: 242px;
+        width: 242px;
+      }
+
+      @include base.breakpoint-up("large") {
+        height: 252px;
+        width: 252px;
+        &:hover {
+          box-shadow: 0 0 0 65px rgba(255, 255, 255, .1);
+        }
+      }
+
+      @include base.breakpoint-up("xlarge") {
+        height: 272px;
+        width: 272px;
+        &:hover {
+          box-shadow: 0 0 0 88px rgba(255, 255, 255, .1);
+        }
+      }
+    }
+
+    @include base.breakpoint-down("medium") {
+      text-align: center;
+      .explore {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    .container__2 {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 400px;
+
+      @include base.breakpoint-up("medium") {
+        max-width: 500px;
+      }
+
+      @include base.breakpoint-up("large") {
+        margin-left: 0px;
+        margin-right: 0px;
+      }
+    }
+
+    .container__3 {
+      @include base.breakpoint-up("large") {
+        margin-left: 10%;
+        align-self: flex-end;
+        margin-right: 10%; //testing
+      }
+    }
+  }
+}

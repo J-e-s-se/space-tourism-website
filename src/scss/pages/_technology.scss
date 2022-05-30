@@ -1,0 +1,97 @@
+@use "../base";
+
+.tech {
+  .slider__nav {
+    width: 155px;
+
+    .slider {
+      width: 40px;
+      height: 40px;
+      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 1;
+      color: base.$white;
+      background-color: unset;
+      border: 1px solid rgba(255, 255, 255, 25%);
+    
+      &.active {
+        color: base.$rich-black;
+        background-color: base.$white;
+        border: none;
+      }
+
+      &:not(.active):hover {
+        border: 1px solid base.$white;
+      }
+    }
+
+    @include base.breakpoint-up("medium") {
+      width: 210px;
+      .slider {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  
+    @include base.breakpoint-up("large") {
+      flex-direction: column;
+      margin: 0 10% 0 0;
+      height: 300px;
+      .slider {
+        width: 80px;
+        height: 80px;
+      }
+    }
+  }
+
+
+  @include base.breakpoint-down("small") {
+    margin-left: 0;
+    margin-right: 0;
+    .container__3 {
+      padding-left: 24px;
+      padding-right: 24px;
+      max-width: 450px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  @include base.breakpoint-up("medium") {
+    @include base.breakpoint-down("medium") {
+      .container__1 {
+        max-width: none;
+        width: 100%;
+      }
+
+      .container__2 {
+        margin-top: 2.5rem;
+      }
+      .container__3 {
+        width: 95%;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+
+  @include base.breakpoint-up("large") {
+    .container__1:not(.intro) {
+      flex-direction: row-reverse;
+      padding-top: 2.5rem;
+    }
+
+    .container__3 {
+      display: flex;
+      width: 50%;
+      padding-top: 3.5rem;
+    }
+
+    .container__2 {
+      width: 40%;
+    }
+  }
+}
