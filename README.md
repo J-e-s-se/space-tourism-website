@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://your-solution-url.com]
+- Solution URL: [https://github.com/J-e-s-se/space-tourism-website]
 - Live Site URL: [https://stark-thicket-79261.herokuapp.com/]
 
 ## My process
